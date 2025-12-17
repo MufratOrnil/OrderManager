@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MasterDetailApp.Models.OrderItem>
+
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price.ToString("N2")</td>
+            </tr>
+        }
+    </tbody>
+</table>
